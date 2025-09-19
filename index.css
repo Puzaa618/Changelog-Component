@@ -1,0 +1,90 @@
+html
+{
+    box-sizing: content-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+}
+body
+{
+    margin:0;
+}
+h1, h4
+{
+    text-align: center;
+}
+#Changelog
+{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(7, 1fr);
+    row-gap: 40px;
+}
+#Changelog li
+{
+    list-style: none;
+    margin:20px 0;
+    position: relative;
+    padding-left: 20px;
+}
+#Changelog li::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+}
+#Changelog li::after
+{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top:12px;
+    width:2px;
+    height: 600%;
+    background-color: black;
+}
+#Changelog li:last-child::after
+{
+    height: 100%;
+}
+#Changelog>p
+{
+    padding-top:6px;
+    padding-left: 10px;
+    color: gray;
+}
+.button
+{
+    margin-top: 20px;
+    text-align: center;
+}
+.button>button
+{
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    width: 250px;
+    background-color: black;
+    color: white;
+}
+.button>button:hover
+{
+    background-color: gray;
+    cursor: pointer;
+}
+@media(min-width:700px)
+{
+    .content
+    {
+        display: flex;
+        justify-content: center;
+    }
+    #Changelog>p
+    {
+        padding-right: 10px;
+    }
+}
